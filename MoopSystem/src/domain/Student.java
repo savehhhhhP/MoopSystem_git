@@ -66,13 +66,4 @@ public class Student  implements java.io.Serializable {
     public void setScore(Integer score) {
         this.score = score;
     }
-   
-
-
-
-
-
-
-
-
 }

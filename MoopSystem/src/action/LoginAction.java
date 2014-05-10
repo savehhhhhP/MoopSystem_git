@@ -49,6 +49,18 @@ public class LoginAction extends ActionSupport {
 
 		Session session = sessionFactory.openSession();
 		Transaction tx =session.beginTransaction();
+		
+		 Student stu = new Student("Äô¾¸Óî", 22, 98);  
+		    try {  
+		        session.save(stu);  
+		        tx.commit();  
+		    } catch (Exception e) {  
+		        tx.rollback();  
+		        e.printStackTrace();  
+		    }finally{  
+		        session.close();  
+		    }  
+		    return SUCCESS;
 
 //		UserCategory cat = new UserCategory("aa");
 //		cat.setId(0);
@@ -71,30 +83,7 @@ public class LoginAction extends ActionSupport {
 //	    }
 //	    return SUCCESS;
 //		
-	    Student stu = new Student("Äô¾¸Óî", 22, 98);  
-	    try {  
-	        session.save(stu);  
-	        tx.commit();  
-	    } catch (Exception e) {  
-	        tx.rollback();  
-	        e.printStackTrace();  
-	    }finally{  
-	        session.close();  
-	    }  
-	    return SUCCESS;
-//	    
-//		String hql = "select * from [User] u where u.email=? and u.password=?";
-//		Query query = session.createSQLQuery(hql);
-//		query.setParameter(0, userEmail);
-//		query.setParameter(1, userPsw);
-//		System.out.println("--------------");
-//		List<Object> user = query.list();
-//		session.close();
-//		System.out.println(user.size() +"--------------");
-//		if(user.size()>0){
-//			return SUCCESS;
-//		}else{
-//			return ERROR;
-//		}
+	   
+
 	}
 }
