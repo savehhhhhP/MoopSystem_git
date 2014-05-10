@@ -52,8 +52,6 @@
 	<mapping resource="domain/UserCategory.hbm.xml" />
 	<mapping resource="domain/UserExtendInfo.hbm.xml" />
 	<mapping resource="domain/Student.hbm.xml" />
-
-
 </session-factory>
 
 </hibernate-configuration>
