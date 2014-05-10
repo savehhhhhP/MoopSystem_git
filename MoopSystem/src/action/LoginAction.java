@@ -45,7 +45,6 @@ public class LoginAction extends ActionSupport {
 	 */
 	
 	public String execute() throws Exception{
-		
 
 		Session session = sessionFactory.openSession();
 		Transaction tx =session.beginTransaction();

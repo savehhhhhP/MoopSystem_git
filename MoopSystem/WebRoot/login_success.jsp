@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -14,6 +14,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-    <h2>您好！ 用户<s:property value="usermail"/> 欢迎您登陆成功</h2>
+    <h2>æ¨å¥½ï¼ ç¨æ·<s:property value="usermail"/> æ¬¢è¿æ¨ç»éæå</h2>
   </body> 
 </html>
