@@ -3,9 +3,19 @@
 
 <hibernate-reverse-engineering>
 
-<table name="student" schema="dbo" catalog="moop" class="Student">
+	<table name="student" schema="dbo" catalog="moop">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="User" schema="dbo" catalog="moop">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+<table name="UserInfo" schema="dbo" catalog="moop">
 	<primary-key>
-		<generator class="uuid.string"></generator>
+		<generator class="native"></generator>
 	</primary-key>
 </table>
 </hibernate-reverse-engineering>

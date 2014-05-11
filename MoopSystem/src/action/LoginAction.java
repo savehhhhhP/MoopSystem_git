@@ -9,10 +9,7 @@ import org.hibernate.classic.Session;
 
 import com.opensymphony.xwork2.ActionSupport;
 
-import domain.Enterprise;
-import domain.Student;
-import domain.User;
-import domain.UserCategory;
+
 
 public class LoginAction extends ActionSupport {
 	private String userEmail;
@@ -39,47 +36,45 @@ public class LoginAction extends ActionSupport {
 	public void setSessionFactory(SessionFactory sessionFactory) {
 		this.sessionFactory = sessionFactory;
 	}
-	
-	/**
-	 * ï¿½ï¿½Ñ¯ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½È·ï¿½ï¿½ï¿½ï¿½È·ï¿½ï¿½ï¿½ï¿½sessionï¿½Òµï¿½Â¼ï¿½É¹ï¿½ï¿½ï¿½
-	 */
+
 	
 	public String execute() throws Exception{
-
-		Session session = sessionFactory.openSession();
-		Transaction tx =session.beginTransaction();
+		System.out.println(userPsw);
+		System.out.println(userEmail);
 		
-		 Student stu = new Student("Äô¾¸Óî", 22, 98);  
-		    try {  
-		        //session.save(stu);  
-		        tx.commit();  
-		    } catch (Exception e) {  
-		        tx.rollback();  
-		        e.printStackTrace();  
-		    }finally{  
-		        session.close();  
-		    }  
-		    return SUCCESS;
+		Session session = sessionFactory.openSession();
+		Transaction tx = null;
+		try{
+			tx =session.beginTransaction();
+			String hql = "from UserInfo where Email=? and Password=?";
+		      Query query = session.createQuery(hql);
+		      query.setParameter(0, userEmail);
+		      query.setParameter(1, userPsw);
+		      java.util.List list = query.list();
+		      if(list.size()>0){
+		    	  return SUCCESS;
+		      }
+		      return ERROR;
+		}
+		catch(Exception e){
+			return ERROR;
+		}
+		
 
-//		UserCategory cat = new UserCategory("aa");
-//		cat.setId(0);
+//		Session session = sessionFactory.openSession();
+//		Transaction tx =session.beginTransaction();
 //		
-//		Enterprise en = new Enterprise("a", new List(){"a"},
-//				Set reProjectEnterprises, Set reProjectPatentUsers, Set users,
-//				Set reSubprojectEnterprises, Set reEnterpriseUsers);
-//	    User usr =new User(cat,en, "a",
-//				"aa", "aa", "aa");
-//	    
-//	    usr.setId(1);
-//	    try {
-//	        session.save(usr);
-//	        tx.commit();  
-//	    } catch (Exception e) {  
-//	        tx.rollback();  
-//	        e.printStackTrace();  
-//	    }finally{  
-//	        session.close();  
-//	    }
-//	    return SUCCESS;
+//		 Student stu = new Student("Äô¾¸Óî", 22, 98);  
+//		    try {  
+//		        session.save(stu);
+//		        tx.commit();  
+//		    } catch (Exception e) {  
+//		        tx.rollback();  
+//		        e.printStackTrace();  
+//		    }finally{  
+//		        session.close();  
+//		    }  
+//		    return SUCCESS;
+
 	}
 }

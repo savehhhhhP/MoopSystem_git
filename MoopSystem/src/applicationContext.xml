@@ -33,12 +33,11 @@
 		</property> -->
 	</bean>
 
-	<!-- -->
-    <bean id="userDAO" class="dao.UserDAOImpl">
+  <!--   <bean id="userDAO" class="dao.UserDAOImpl">
 		<property name="sessionFactory">
 			<ref local="sessionFactory"></ref>
 		</property>
-	</bean>
+	</bean> -->
 
 
 	<bean id="login" class="action.LoginAction">

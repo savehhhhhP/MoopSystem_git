@@ -13,9 +13,9 @@
 		<form action="login.action" method="post">
 			<h2>登录</h2>
 			<p>
-				邮箱:<input type="text" name="usermail" /><br>
+				邮箱:<input type="text" name="userEmail" /><br>
 				密码:<input type="text"
-					name="userpassword" /> <br>
+					name="userPsw" /> <br>
 					<input class="btn btn-primary" type="submit" value="login" />
 		</form>
 	</center>
