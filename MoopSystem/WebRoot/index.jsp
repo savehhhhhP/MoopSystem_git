@@ -15,7 +15,6 @@
 <link href="css/extend/ext.css" rel="stylesheet">
 <link href="css/bootstrap-3.1.1-dist/css/bootstrap.css" rel="stylesheet">
 <link href="css/extend/jumbotron.css" rel="stylesheet">
-
 </head>
 
 
@@ -30,18 +29,22 @@
 						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">项目管理系统MOOP</a>
+				<a class="navbar-brand" href="index.jsp">项目流程化管理系统 MOOP</a>
 			</div>
 			<div class="navbar-collapse collapse">
-				<form class="navbar-form navbar-right" role="form">
+				<form class="navbar-form navbar-right" action="login.action" method="post">
 					<div class="form-group">
-						<input type="text" placeholder="Email" class="form-control">
+						<input type="text" placeholder="Email" name="userEmail" class="form-control">
 					</div>
 					<div class="form-group">
-						<input type="password" placeholder="Password" class="form-control">
+						<input type="password" placeholder="Password" name="userPsw" class="form-control">
 					</div>
-					<button type="submit" class="btn btn-success">登陆</button>
+					<button type="submit" value="login" class="btn btn-success">登陆</button>
+					<a href="/MoopSystem/register.jsp" class="btn btn-success">注册</a>
+					
 				</form>
+				
+				
 			</div>
 			<!--/.navbar-collapse -->
 		</div>
@@ -59,10 +62,10 @@
 		<!-- Wrapper for slides -->
 		<div class="carousel-inner">
 			<div class="item active">
-				<img alt="First slide" src="image/xxx1.jpg" />
+				<img alt="First slide" src="image/xxx1_1.jpg" />
 			</div>
 			<div class="item">
-				<img alt="Second slide" src="image/xxx2.jpg" />
+				<img alt="Second slide" src="image/xxx2_2.jpg" />
 			</div>
 		</div>
 

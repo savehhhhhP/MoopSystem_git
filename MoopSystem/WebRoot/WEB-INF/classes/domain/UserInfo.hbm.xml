@@ -10,9 +10,6 @@
             <column name="ID" />
             <generator class="native"></generator>
         </id>
-        <many-to-one name="userInfo" class="domain.UserInfo" update="false" insert="false" fetch="select">
-            <column name="ID" not-null="true" unique="true" />
-        </many-to-one>
         <property name="name" type="java.lang.String">
             <column name="Name" not-null="true" />
         </property>

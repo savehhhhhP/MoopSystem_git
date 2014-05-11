@@ -13,7 +13,6 @@ public class UserInfo implements java.io.Serializable {
 	// Fields
 
 	private Integer id;
-	private UserInfo userInfo;
 	private String name;
 	private String email;
 	private String password;
@@ -35,9 +34,8 @@ public class UserInfo implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public UserInfo(UserInfo userInfo, String name, String email,
+	public UserInfo(String name, String email,
 			String password, String number) {
-		this.userInfo = userInfo;
 		this.name = name;
 		this.email = email;
 		this.password = password;
@@ -45,11 +43,10 @@ public class UserInfo implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public UserInfo(UserInfo userInfo, String name, String email,
+	public UserInfo(String name, String email,
 			String password, String number, String phone, String sex,
 			Date birth, Integer nationId, String degree, String title,
 			Integer categoryId, Integer enterpriseId, Set userInfos) {
-		this.userInfo = userInfo;
 		this.name = name;
 		this.email = email;
 		this.password = password;
@@ -62,7 +59,6 @@ public class UserInfo implements java.io.Serializable {
 		this.title = title;
 		this.categoryId = categoryId;
 		this.enterpriseId = enterpriseId;
-		this.userInfos = userInfos;
 	}
 
 	// Property accessors
@@ -73,14 +69,6 @@ public class UserInfo implements java.io.Serializable {
 
 	public void setId(Integer id) {
 		this.id = id;
-	}
-
-	public UserInfo getUserInfo() {
-		return this.userInfo;
-	}
-
-	public void setUserInfo(UserInfo userInfo) {
-		this.userInfo = userInfo;
 	}
 
 	public String getName() {

@@ -45,5 +45,10 @@
 			<ref bean="sessionFactory"/>
 		</property>
 	</bean>
-
+	
+	<bean id="register" class="action.RegisterAction">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
 </beans>
