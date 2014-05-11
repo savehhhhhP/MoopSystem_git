@@ -6,8 +6,8 @@
 	<constant name="struts.devMode" value="true" />
 
 
-	<package name="struts" extends="struts-default">
-		<action name="login" class="LoginAction">
+	<package name="default" namespace="/" extends="struts-default" >
+		<action name="login" class="action.LoginAction">
 			<result name="error">/login_err.jsp</result>
 			<result name="success">/login_success.jsp</result>
 		</action>

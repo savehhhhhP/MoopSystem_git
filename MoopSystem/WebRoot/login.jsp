@@ -1,15 +1,9 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@taglib uri="/struts-tags" prefix="struts" %>
-<%
-String path = request.getContextPath();
-String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
-%>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<base href="<%=basePath%>">
-
 <title>My JSP 'login.jsp' starting page</title>
 
 </head>
@@ -22,7 +16,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				邮箱:<input type="text" name="usermail" /><br>
 				密码:<input type="text"
 					name="userpassword" /> <br>
-					<input class="btn btn-primary" type="submit" value="登录" />
+					<input class="btn btn-primary" type="submit" value="login" />
 		</form>
 	</center>
 </body>

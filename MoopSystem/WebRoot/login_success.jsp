@@ -14,6 +14,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-    <h2>æ¨å¥½ï¼ ç¨æ·<s:property value="usermail"/> æ¬¢è¿æ¨ç»éæå</h2>
+    <h2>登陆成功！！！    <s:property value="usermail"/> </h2>
   </body> 
 </html>

@@ -51,7 +51,7 @@ public class LoginAction extends ActionSupport {
 		
 		 Student stu = new Student("Äô¾¸Óî", 22, 98);  
 		    try {  
-		        session.save(stu);  
+		        //session.save(stu);  
 		        tx.commit();  
 		    } catch (Exception e) {  
 		        tx.rollback();  
@@ -81,8 +81,5 @@ public class LoginAction extends ActionSupport {
 //	        session.close();  
 //	    }
 //	    return SUCCESS;
-//		
-	   
-
 	}
 }
