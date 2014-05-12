@@ -13,8 +13,8 @@
 		</action>
 		
 		<action name="register" class="action.RegisterAction">
-			<result name="error">/login_err.jsp</result>
-			<result name="success">/login.jsp</result>
+			<result name="error">/register_err.jsp</result>
+			<result name="success">/register_success.jsp</result>
 		</action>
 	</package>
 </struts>    

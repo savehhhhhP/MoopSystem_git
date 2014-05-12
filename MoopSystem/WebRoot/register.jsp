@@ -52,7 +52,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<a class="navbar-brand" href="index.jsp">项目流程化管理系统 MOOP</a>
 			</div>
 			<div class="navbar-collapse collapse">
-				<form class="navbar-form navbar-right" action="register.action" method="post">
+				<form class="navbar-form navbar-right" action="login.action" method="post">
 					<div class="form-group">
 						<input type="text" placeholder="Email" name="userEmail" class="form-control">
 					</div>
@@ -77,11 +77,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<div class="panel panel-default panel-page" style="margin-left:0;text-align:left;">
 					<div class="panel-heading" style="margin:30px;background:white;">
 						<h2>注册</h2>
-						<form id="register-form" method="post" action="register">
+						
+						<form id="register-form" method="post" action="register.action">
 							<div class="form-group">
 								<label class="control-label required" for="user.email">邮箱地址</label>
 								<div>
-									<input type="text" id="user.email" required="required" name="user.email" 
+									<input type="text" id="user.email" required="required" name="_userEmail" 
 									  class="form-control" data-explain="填写你常用的邮箱作为登录帐号">
 									<p class="help-block">填写你常用的邮箱作为登录帐号</p>
 								</div>
@@ -90,7 +91,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 								<label class="control-label required" for="register_nickname">昵称</label>
 								<div class="controls">
 									<input type="text" id="user.name" required="required"
-										name="user.name" class="form-control"
+										name="_nickname" class="form-control"
 										data-url="/register/nickname/check" data-widget-cid="widget-4"
 										data-explain="该怎么称呼你？ 中、英文均可，最长14个英文或7个汉字">
 									<p class="help-block">该怎么称呼你？ 中、英文均可，最长20个英文或10个汉字</p>
@@ -101,7 +102,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 								<label class="control-label required" for="register_password">密码</label>
 								<div class="controls">
 									<input type="password" id="user.psw1" required="required"
-										name="user.psw1" class="form-control"
+										name="_userPsw1" class="form-control"
 										data-widget-cid="widget-2" data-explain="5-20位英文、数字、符号，区分大小写">
 									<p class="help-block">10位英文、数字、符号，区分大小写</p>
 								</div>
@@ -112,7 +113,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 									for="register_confirmPassword">确认密码</label>
 								<div class="controls">
 									<input type="password" id="user.psw2" required="required"
-										name="user.psw2" class="form-control"
+										name="_userPsw2" class="form-control"
 										data-widget-cid="widget-3" data-explain="再输入一次密码">
 									<p class="help-block">再输入一次密码</p>
 								</div>
@@ -123,7 +124,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 									<input type="hidden" id="register__token"
 										name="register[_token]"
 										value="80e3d631bd8881383ae6fa395c660474fcf973c4">
-									<button type="submit"
+									<button type="submit" value="register"
 										class="btn btn-primary btn-large btn-block">注册</button>
 								</div>
 							</div>

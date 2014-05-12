@@ -151,6 +151,16 @@ public class UserInfo implements java.io.Serializable {
 		this.title = title;
 	}
 
+	@Override
+	public String toString() {
+		return "UserInfo [id=" + id + ", name=" + name + ", email=" + email
+				+ ", password=" + password + ", number=" + number + ", phone="
+				+ phone + ", sex=" + sex + ", birth=" + birth + ", nationId="
+				+ nationId + ", degree=" + degree + ", title=" + title
+				+ ", categoryId=" + categoryId + ", enterpriseId="
+				+ enterpriseId + ", userInfos=" + userInfos + "]";
+	}
+
 	public Integer getCategoryId() {
 		return this.categoryId;
 	}

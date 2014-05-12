@@ -25,7 +25,11 @@ public class RegisterAction extends ActionSupport{
 		return _nickname;
 	}
 
-	public void set_Nickname(String _Nickname) {
+	public String get_nickname() {
+		return _nickname;
+	}
+
+	public void set_nickname(String _Nickname) {
 		this._nickname = _Nickname;
 	}
 
@@ -64,6 +68,8 @@ public class RegisterAction extends ActionSupport{
 	}
 
 	public String execute() throws Exception{
+		
+		
 		if(!_userPsw1.equals(_userPsw2)){
 			return ERROR;
 		}
@@ -72,7 +78,9 @@ public class RegisterAction extends ActionSupport{
 		Transaction tx =null;
 
 		UserInfo stu = new UserInfo(_nickname,_userEmail, _userPsw1,"111");
+		
 		stu.setId(1);
+		System.out.println("_nickname : "+_nickname+ stu.toString());
 		try {  
 			tx =session.beginTransaction();
 			session.save(stu);
