@@ -1,0 +1,46 @@
+.bgbody{
+	background-color: #f1f2f6;
+}
+
+.contenerm{
+	margin-buttom:20px;
+	margin-top:60px;
+}
+
+.line-bottom{
+	border-bottom: 1px solid #ddd;
+}
+.paddingtexttop{
+	padding-top:5px;
+}
+
+.fleft{
+	float:left;
+}
+.fright{
+	float:right;
+}
+.width80{
+	width: 80;
+}
+
+.textalignr{
+	text-align: right;
+}
+
+¡£borderin{
+	border: 1px solid #ddd;
+	margin: 10px;
+}
+¡£marginrow{
+	margin: 15;
+}
+.mypagination{
+display: inline-block;
+padding-left: 0;
+border-radius: 4px;
+}
+
+.movecenter{
+	text-align: center;
+}
